@@ -1,0 +1,135 @@
+/* Body */
+html, body * {
+    font-family: ForoSans;
+}
+
+/* Main */
+.main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.third {
+    width: 50%;
+    float: left;
+}
+.twothird {
+    width: 50%;
+    float: left;
+}
+
+/* Profile Picture and Name */
+.profile-picture {
+    width: 25%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    border-radius: 50%;
+}
+.center-item div * {
+    display: block;
+    margin: 14 auto;
+    text-align: center;
+}
+.center-item {
+    padding: 0.01em 16px;
+}
+.name {
+    font-size: 36px;
+}
+
+/* Cards */
+.card {
+    padding: 20px;
+    margin: 30;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+.container {
+    padding: 0.01em 16px;
+}
+.twothird .title {
+    margin: 6 0;
+    padding: 0.01em 16px;
+}
+
+/* Extra */
+.box-shadow {
+    box-shadow: 0px 0px 10px 1px #e0e0e0;
+}
+.text-teal {
+    color: teal;
+}
+.title { /* Title */
+    font-size: 28px;
+}
+
+/* w3 Overwrite */
+.w3-small, .w3-teal {
+    height: 18px;
+}
+.w3-dark-grey {
+    background-color: #151515 !important;
+}
+.w3-dark-hr {
+    height: 1px;
+    background-color: #333333;
+    border: none;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    padding: 8px;
+
+    background-color: rgb(240, 255, 255);
+}
+.footer img {
+    height: 60%;
+    margin: 6px;
+    opacity: 70%;
+}
+.footer a:hover {
+    cursor: pointer;
+}
+
+ /* Dark Mode */
+.dark-mode {
+    background-color: rgb(10 10 10);
+    color: lightgray;
+}
+.box-shadow-dark {
+    border: 0 solid gray;
+    box-shadow: 0px 0px 5px 2px #1a1a1a;
+}
+
+/* Media */
+@media screen and (max-width: 750px) {
+    .third, .twothird {
+        width: 100%;
+        float: none;
+    }
+    .main {
+        margin: 0 0 80 0;
+    }
+    .card {
+        margin: 30;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .name {
+        font-size: 22px;
+    }
+    .profile-picture {
+        width: 34%;
+    }
+}
+
+/* Font */
+@font-face {
+    font-family: ForoSans;
+    src: url(font/ForoSans.otf);
+}
