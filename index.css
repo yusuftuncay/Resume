@@ -8,13 +8,15 @@ html, body * {
     max-width: 1400px;
     margin: 0 auto;
 }
-.third {
+.left-column {
     width: 50%;
     float: left;
+    margin-bottom: 50;
 }
-.twothird {
+.right-column {
     width: 50%;
     float: left;
+    margin-bottom: 50;
 }
 
 /* Profile Picture and Name */
@@ -45,9 +47,9 @@ html, body * {
     border: 2px solid white;
 }
 .container {
-    padding: 0.01em 16px;
+    padding: 0 16px;
 }
-.twothird .title {
+.right-column .title {
     margin: 6 0;
     padding: 0.01em 16px;
 }
@@ -61,6 +63,9 @@ html, body * {
 }
 .title { /* Title */
     font-size: 28px;
+}
+a:hover {
+    cursor: pointer;
 }
 
 /* w3 Overwrite */
@@ -92,9 +97,6 @@ html, body * {
     margin: 6px;
     opacity: 70%;
 }
-.footer a:hover {
-    cursor: pointer;
-}
 
  /* Dark Mode */
 .dark-mode {
@@ -106,9 +108,22 @@ html, body * {
     box-shadow: 0px 0px 5px 2px #1a1a1a;
 }
 
+/* Interests Card */
+#arrowIcon {
+    height: 22px;
+}
+#interests { /* Initially hide the interests element */
+    margin: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+}
+
 /* Media */
 @media screen and (max-width: 750px) {
-    .third, .twothird {
+    .left-column
+, .right-column
+ {
         width: 100%;
         float: none;
     }
