@@ -3,6 +3,12 @@ html, body * {
     font-family: ForoSans;
 }
 
+/* Font */
+@font-face {
+    font-family: ForoSans;
+    src: url(font/ForoSans.otf);
+}
+
 /* Main */
 .main {
     max-width: 1400px;
@@ -121,9 +127,7 @@ a:hover {
 
 /* Media */
 @media screen and (max-width: 750px) {
-    .left-column
-, .right-column
- {
+    .left-column, .right-column {
         width: 100%;
         float: none;
     }
@@ -141,10 +145,4 @@ a:hover {
     .profile-picture {
         width: 34%;
     }
-}
-
-/* Font */
-@font-face {
-    font-family: ForoSans;
-    src: url(font/ForoSans.otf);
 }
