@@ -33,7 +33,7 @@ html, body * {
     
     border-radius: 50%;
 }
-.center-item div * {
+.center-item h5 {
     display: block;
     margin: 14 auto;
     text-align: center;

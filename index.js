@@ -52,10 +52,9 @@ function DarkMode() {
     }
 }
 
-/* Define a flag variable to keep track of the current state of the image */
+/* A flag variable to keep track of the current state of the image */
 var isFlipped = false;
 
-/* Define a function called flipImage() */
 function FlipImage() {
     /* Retrieve element with the ID */
     var image = document.getElementById("arrowIcon");
