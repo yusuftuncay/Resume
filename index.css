@@ -25,24 +25,15 @@ html, body * {
     margin-bottom: 50;
 }
 
-/* Profile Picture and Name */
-.profile-picture {
-    width: 25%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
-    border-radius: 50%;
-}
-.center-item h5 {
+/* Name */
+.name {
+    font-size: 36px;
     display: block;
     margin: 14 auto;
     text-align: center;
 }
-.center-item {
-    padding: 0.01em 16px;
-}
-.name {
-    font-size: 36px;
+.center-text {
+    text-align: center;
 }
 
 /* Cards */
