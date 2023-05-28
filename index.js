@@ -43,12 +43,12 @@ function DarkMode() {
 
     /* Footer Icon */
     if (shadows[0].classList.contains("box-shadow")) {
-        document.getElementById("darkModeIcon").src = "img/light-mode-sun.png";
-        document.getElementById("arrowIcon").src = "img/light-mode-arrow.png";
+        document.getElementById("darkModeIcon").src = "images/light-mode-sun.png";
+        document.getElementById("arrowIcon").src = "images/light-mode-arrow.png";
     }
     else if (shadows[0].classList.contains("box-shadow-dark")) {
-        document.getElementById("darkModeIcon").src = "img/dark-mode-sun.png";
-        document.getElementById("arrowIcon").src = "img/dark-mode-arrow.png";
+        document.getElementById("darkModeIcon").src = "images/dark-mode-sun.png";
+        document.getElementById("arrowIcon").src = "images/dark-mode-arrow.png";
     }
 }
 
