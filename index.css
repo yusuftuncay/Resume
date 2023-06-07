@@ -35,6 +35,12 @@ html, body * {
 .center-text {
     text-align: center;
 }
+.my-info a {
+    margin: 15 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* Cards */
 .card {
