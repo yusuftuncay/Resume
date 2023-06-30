@@ -1,3 +1,10 @@
+/* Saving  DarkMode State */
+var darkMode;
+localStorage.setItem('darkMode', darkMode);
+if (localStorage.darkMode == true) {
+    DarkMode();
+}
+
 /* Dark Mode */
 function DarkMode() {
     document.body.classList.toggle("dark-mode"); /* Body */
@@ -12,10 +19,16 @@ function DarkMode() {
         if (shadows[i].classList.contains("box-shadow")) {
             shadows[i].classList.remove("box-shadow");
             shadows[i].classList.add("box-shadow-dark");
+
+            /* LocalStorage */
+            localStorage.darkMode == false;
         } 
         else if (shadows[i].classList.contains("box-shadow-dark")) {
             shadows[i].classList.remove("box-shadow-dark");
             shadows[i].classList.add("box-shadow");
+
+            /* LocalStorage */
+            localStorage.darkMode == true;
         }
     }
 
@@ -45,10 +58,12 @@ function DarkMode() {
     if (shadows[0].classList.contains("box-shadow")) {
         document.getElementById("darkModeIcon").src = "images/light-mode-sun.png";
         document.getElementById("arrowIcon").src = "images/light-mode-arrow.png";
+        document.getElementById("gameIcon").src = "images/light-mode-game.png";
     }
     else if (shadows[0].classList.contains("box-shadow-dark")) {
         document.getElementById("darkModeIcon").src = "images/dark-mode-sun.png";
         document.getElementById("arrowIcon").src = "images/dark-mode-arrow.png";
+        document.getElementById("gameIcon").src = "images/dark-mode-game.png";
     }
 }
 

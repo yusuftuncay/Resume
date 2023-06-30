@@ -1,0 +1,36 @@
+<html lang="en-BE">
+  <head>
+    <title>Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" href="images/globe.png"> <!-- Website Icon -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- Progress Bar Styling -->
+
+    <link rel="stylesheet" href="index.css"> <!-- Index CSS -->
+    <link rel="stylesheet" href="game.css"> <!-- Index CSS -->
+    <!--<script src="index.js"></script>  Game JS -->
+    <script src="game.js" defer></script> <!-- Game JS -->
+  </head>
+  
+  <body>
+
+    <!-- Game -->
+    <p id="p1">SCORE:</p>
+    <p id="p2">HIGHSCORE:</p>
+    <p id="score"> -</p>
+    <p id="high"> -</p>
+    <canvas width="400" height="400" id="game"></canvas>
+
+    <!-- Footer -->
+    <footer class="footer box-shadow">
+        <a onclick="DarkMode()">
+            <img id="darkModeIcon" src="images/light-mode-sun.png" alt="Dark/Lightmode Icon">
+        </a>
+        <a onclick="Game()" href="index.html">
+            <img id="gameIcon" src="images/light-mode-game.png" alt="Game Icon">
+        </a>
+    </footer>
+
+  </body>
+</html>

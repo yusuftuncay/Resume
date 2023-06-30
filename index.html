@@ -3,13 +3,16 @@
     <title>Resume</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="icon" href="images/globe.png"> <!-- Website Icon -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- Progress Bar Styling -->
-    <link rel="stylesheet" href="index.css"> <!-- CSS -->
-    <script src="index.js"></script> <!-- JS -->
+
+    <link rel="stylesheet" href="index.css"> <!-- Index CSS -->
+    <script src="index.js"></script> <!-- Index JS -->
   </head>
   
-  <body>
+  <body class="resume">
+
     <!-- Main -->
     <div class="main">
       
@@ -158,9 +161,13 @@
 
     <!-- Footer -->
     <footer class="footer box-shadow">
-      <a id="darkMode" onclick="DarkMode()">
+      <a onclick="DarkMode()">
         <img id="darkModeIcon" src="images/light-mode-sun.png" alt="Dark/Lightmode Icon">
       </a>
+      <a onclick="Game()" href="game.html">
+        <img id="gameIcon" src="images/light-mode-game.png" alt="Game Icon">
+      </a>
     </footer>
+
   </body>
 </html>
