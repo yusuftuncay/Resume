@@ -1,8 +1,12 @@
 /* Saving  DarkMode State */
-var darkMode;
+var darkMode = true;
 localStorage.setItem('darkMode', darkMode);
 if (localStorage.darkMode == true) {
-    DarkMode();
+  DarkMode();
+}
+else if (darkMode == false) {
+  darkMode = true;
+  location.reload();
 }
 
 var canvas = document.getElementById('game');
@@ -106,9 +110,9 @@ function loop() {
       {
         // snake occupies same space as a body part. reset game
         if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) { 
-          if(score>max)
+          if(score > max)
           {
-            max=score;
+            max = score;
           }
           snake.x = 160;
           snake.y = 160;
@@ -119,6 +123,10 @@ function loop() {
           apple.x = getRandomInt(0, 25) * grid;
           apple.y = getRandomInt(0, 25) * grid;
           document.getElementById('high').innerHTML=max;
+
+          // Score
+          score = 0;
+          document.getElementById('score').innerHTML = score;
         }
       }
     }

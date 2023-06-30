@@ -1,8 +1,12 @@
 /* Saving  DarkMode State */
-var darkMode;
+var darkMode = true;
 localStorage.setItem('darkMode', darkMode);
 if (localStorage.darkMode == true) {
     DarkMode();
+}
+else if (darkMode == false) {
+  darkMode = true;
+  location.reload();
 }
 
 /* Dark Mode */
