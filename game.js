@@ -124,7 +124,7 @@ function loop() {
           apple.y = getRandomInt(0, 25) * grid;
           document.getElementById('high').innerHTML=max;
 
-          // Score
+          // Update Score
           score = 0;
           document.getElementById('score').innerHTML = score;
         }
