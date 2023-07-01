@@ -1,4 +1,4 @@
-﻿<html lang="en-BE">
+﻿<html">
   <head>
     <title>Resume</title>
     <meta charset="UTF-8">
@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- Progress Bar Styling -->
 
     <link rel="stylesheet" href="index.css"> <!-- Index CSS -->
-    <script src="index.js"></script> <!-- Index JS -->
+
+    <script src="index.js" defer></script> <!-- Index JS -->
+    <script src="dark-mode.js" defer></script> <!-- Dark Mode JS -->
   </head>
   
   <body class="resume">
@@ -125,7 +127,7 @@
         <div class="card box-shadow">
           <p class="title">
             <strong>Interests&nbsp;&nbsp;</strong>
-            <a onclick="FlipImage()">
+            <a onclick="flipImage()">
               <img id="arrowIcon" src="images/light-mode-arrow.png" alt="Interests Dropdown Icon">
             </a>
           </p>
@@ -161,7 +163,7 @@
 
     <!-- Footer -->
     <footer class="footer box-shadow">
-      <a onclick="DarkMode()">
+      <a onclick="checkDarkModeState()">
         <img id="darkModeIcon" src="images/light-mode-sun.png" alt="Dark/Lightmode Icon">
       </a>
       <a href="game.html">
