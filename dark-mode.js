@@ -1,19 +1,31 @@
-// Checking darkMode State
-var darkModeState;
-function checkDarkModeState () {
-    if (darkModeState == true) {
-        darkMode(true);
-        darkModeState = false;
+// Saving darkMode State
+var darkModeState = localStorage.getItem("darkMode"); // Get the stored value from localStorage
+
+// Checking DarkMode State
+function checkDarkModeState() {
+    var darkModeState = localStorage.getItem("darkMode"); // Get the stored value from localStorage
+    
+    if (darkModeState === "true") {
+        darkMode(true); // Enable dark mode
+    } else {
+        darkMode(false); // Disable dark mode
     }
-    else if (darkModeState == false) {
-        darkMode(false);
-        darkModeState = true;
-    }
-    else { // First click
-        darkMode(true);
-        darkModeState = true;
-    }
+
+    localStorage.setItem("darkMode", darkModeState); // Store the updated state in localStorage
 }
+function checkDarkModeStateOnButtonPress() {
+    var darkModeState = localStorage.getItem("darkMode"); // Get the stored value from localStorage
+  
+    if (darkModeState === "true") {
+      darkMode(false); // Disable dark mode
+      darkModeState = "false"; // Update the state to "false"
+    } else {
+      darkMode(true); // Enable dark mode
+      darkModeState = "true"; // Update the state to "true"
+    }
+  
+    localStorage.setItem("darkMode", darkModeState); // Store the updated state in localStorage
+  }
 
 // Dark Mode
 function darkMode(isEnabled) {
@@ -92,12 +104,15 @@ function darkMode(isEnabled) {
         darkModeIcon.src = "images/light-mode-sun.png";
         gameIcon.src = "images/light-mode-game.png";
         
-        // Basically a Check if User is on the "resume" page 
-        if (arrowIcon !== null) {
+        if (arrowIcon) { // Basically a Check if User is on the "resume" page 
             arrowIcon.src = "images/light-mode-arrow.png";
         }
     } else {
         darkModeIcon.src = "images/dark-mode-sun.png";
         gameIcon.src = "images/dark-mode-game.png";
+        
+        if (arrowIcon) { // Basically a Check if User is on the "resume" page 
+            arrowIcon.src = "images/dark-mode-arrow.png";
+        }
     }
 }

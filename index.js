@@ -1,6 +1,7 @@
+// A flag variable to keep track of the current state of the image
+var isFlipped = false;
+
 function flipImage() {
-    // A flag variable to keep track of the current state of the image
-    var isFlipped = false;
     
     // Retrieve element with the ID
     var image = document.getElementById("arrowIcon");

@@ -1,4 +1,4 @@
-<html>
+<html lang="nl-BE">
   <head>
     <title>Resume</title>
     <meta charset="UTF-8">
@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="game.css"> <!-- Index CSS -->
     
     <script src="game.js" defer></script> <!-- Game JS -->
-    <script src="dark-mode.js" defer></script> <!-- Dark Mode JS -->
+    <script src="dark-mode.js"></script> <!-- Dark Mode JS -->
   </head>
   
-  <body class="">
+  <body onload="checkDarkModeState()">
 
     <!-- Game -->
     <p id="p1">SCORE:</p>
@@ -26,9 +26,10 @@
 
     <!-- Footer -->
     <footer class="footer box-shadow">
-        <a onclick="checkDarkModeState()">
+        <a onclick="checkDarkModeStateOnButtonPress()">
           <img id="darkModeIcon" src="images/light-mode-sun.png" alt="Dark/Lightmode Icon">
         </a>
+
         <a href="index.html">
           <img id="gameIcon" src="images/light-mode-game.png" alt="Game Icon">
         </a>

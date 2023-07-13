@@ -6,12 +6,10 @@ var count = 0;
 // Check if localStorage.score is not null
 // If it is not null, assign 0 to score
 // Otherwise, assign the value of localStorage.score to score
-var score = localStorage.score !== null ? 0 : localStorage.score;
+var score = 0;
 
 // Reading  last score value 
-if (localStorage.score) {
-  document.getElementById("score").innerHTML = localStorage.score; 
-}
+document.getElementById("score").innerHTML = score; 
 
 var max = 0;  
 var snake = {
@@ -88,7 +86,7 @@ function loop() {
         score += 1;
         
         // Saving score for next playing.
-        localStorage.setItem("score", score);
+        // localStorage.setItem("score", score);
 
         document.getElementById("score").innerHTML = score;
     
@@ -118,8 +116,7 @@ function loop() {
 
           // Update score
           score = 0;
-          localStorage.score = 0;
-          document.getElementById("score").innerHTML = localStorage.score;
+          document.getElementById("score").innerHTML = score;
         }
       }
     }
