@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="nl-BE">
   <head>
     <title>Resume</title>
@@ -15,14 +16,30 @@
   </head>
   
   <body onload="checkDarkModeState()">
-
     <!-- Game -->
-    <p id="p1">SCORE:</p>
-    <p id="p2">HIGHSCORE:</p>
-    <p id="score"> 0</p>
-    <p id="high"> 0</p>
-    <canvas width="400" height="400"
-      id="game" class="box-shadow"></canvas>
+    <div id="scoreTab">
+      <p id="p1">SCORE:</p>
+      <p id="p2">HIGHSCORE:</p>
+      <p id="score"> 0</p>
+      <p id="high"> 0</p>
+    </div>
+
+    <div class="container">
+    
+      <canvas width="400" height="400" id="game" class="box-shadow"></canvas>
+
+      <!-- Buttons Container -->
+      <div id="buttonContainer" class="hidden">
+        <button id="upButton" class="button">Up</button>
+        <div id="leftRightButton">
+          <button id="leftButton" class="button">Left</button>
+          <button id="rightButton" class="button">Right</button>
+        </div>
+        <button id="downButton" class="button">Down</button>
+      </div>
+      
+    </div>
+
 
     <!-- Footer -->
     <footer class="footer box-shadow">
@@ -34,6 +51,5 @@
           <img id="gameIcon" src="images/light-mode-game.png" alt="Game Icon">
         </a>
     </footer>
-
   </body>
 </html>
