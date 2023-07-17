@@ -13,31 +13,31 @@ canvas {
 #p1 {
   color:red;
   position:absolute;
-  left:10%;
+  left:100px;
   top:10px;
 }
 #p2 {
   color:red;
   position:absolute;
-  left:10%;
+  left:100px;
   top:30px;
 }
 #score {
   color:black;
   position:absolute;
-  left:30%;
+  left:200px;
   top:10px;
 }
 #high {
   color:black;
   position:absolute;
-  left:30%;
+  left:200px;
   top:30px;
 }
 #end_msg {
   color:brown;
   position:absolute;
-  left:30%;
+  left:100px;
   top:100px;
 }
 .hidden {
@@ -79,7 +79,7 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  padding: 20px;
 }
 #game {
   width: 400px;
@@ -89,6 +89,4 @@ div {
   width: 400px;
   height: auto;
 }
-#scoreTab {
-
-}
+/* #scoreTab { } */

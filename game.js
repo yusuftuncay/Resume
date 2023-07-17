@@ -118,6 +118,11 @@ function loop() {
 
 // Listen to keyboard events to move the snake
 document.addEventListener("keydown", function (e) {
+  MoveSnake(e);
+});
+
+// Move Snake
+function MoveSnake(e) {
   // Prevent snake from backtracking on itself by checking that it's
   // Not already moving on the same axis (pressing left while moving
   // Left won't do anything, and pressing right while moving left
@@ -143,54 +148,97 @@ document.addEventListener("keydown", function (e) {
     snake.dy = grid;
     snake.dx = 0;
   }
-});
 
-// Check if the screen width is less than 980 pixels
-if (window.innerWidth < 980) {
-  // Show the button container
-  var buttonContainer = document.getElementById("buttonContainer");
-  buttonContainer.classList.remove("hidden");
+  // Check if the screen width is less than 980 pixels
+  if (window.innerWidth < 980) {
+    // Add event listeners to the buttons
+    if(upButton) {
+      upButton.addEventListener("click", function () {
+        if (snake.dy === 0) {
+          snake.dy = -grid;
+          snake.dx = 0;
+        }
+      });
+    }
+    if(leftButton) {
+      leftButton.addEventListener("click", function () {
+        if (snake.dx === 0) {
+          snake.dx = -grid;
+          snake.dy = 0;
+        }
+      });
+    }
+    if(rightButton) {
+      rightButton.addEventListener("click", function () {
+        if (snake.dx === 0) {
+          snake.dx = grid;
+          snake.dy = 0;
+        }
+      });
+    }
+    if(downButton) {
+      downButton.addEventListener("click", function () {
+        if (snake.dy === 0) {
+          snake.dy = grid;
+          snake.dx = 0;
+        }
+      });
+    }
+  }
+};
 
-  // Get the buttons
-  var upButton = document.getElementById("upButton");
-  var leftButton = document.getElementById("leftButton");
-  var rightButton = document.getElementById("rightButton");
-  var downButton = document.getElementById("downButton");
+// Change the layout on mobile view
+function WindowSizeCheck() {
+  // 1st / Canvas
+  if (window.innerWidth < 440) {
+    document.getElementById("game").style.width = "350px";
+  } else if (window.innerWidth > 440) {
+    document.getElementById("game").style.width = "400px";
+  }
 
-  // Add event listeners to the buttons
-  if(upButton) {
-    upButton.addEventListener("click", function () {
-      if (snake.dy === 0) {
-        snake.dy = -grid;
-        snake.dx = 0;
-      }
-    });
+  // 2nd / ScoreBoard
+  if (window.innerWidth < 600) {
+    // #p1
+    var p1Element = document.getElementById("p1");
+    var scoreElement = document.getElementById("score");
+    
+    p1Element.style.left = "30px";
+    scoreElement.style.left = "130px";
+
+    // #p2
+    var p2Element = document.getElementById("p2");
+    var highElement = document.getElementById("high");
+
+    p2Element.style.left = "30px";
+    highElement.style.left = "130px";
+  } else if (window.innerWidth > 601) {
+    // #p1
+    var p1Element = document.getElementById("p1");
+    var scoreElement = document.getElementById("score");
+
+    p1Element.style.left = "100px";
+    scoreElement.style.left = "200px";
+
+    // #p2
+    var p2Element = document.getElementById("p2");
+    var highElement = document.getElementById("high");
+
+    p2Element.style.left = "100px";
+    highElement.style.left = "200px";
   }
-  if(leftButton) {
-    leftButton.addEventListener("click", function () {
-      if (snake.dx === 0) {
-        snake.dx = -grid;
-        snake.dy = 0;
-      }
-    });
-  }
-  if(rightButton) {
-    rightButton.addEventListener("click", function () {
-      if (snake.dx === 0) {
-        snake.dx = grid;
-        snake.dy = 0;
-      }
-    });
-  }
-  if(downButton) {
-    downButton.addEventListener("click", function () {
-      if (snake.dy === 0) {
-        snake.dy = grid;
-        snake.dx = 0;
-      }
-    });
+
+  // 3rd / Buttons
+  if (window.innerWidth < 900) {
+    // Show the button container
+    document.getElementById("buttonContainer").classList.remove("hidden");
+  } else if (window.innerWidth > 900) {
+    // Hide the button container
+    document.getElementById("buttonContainer").classList.add("hidden");
   }
 }
 
 // Start the game
 requestAnimationFrame(loop);
+
+// Add an event listener for the "resize" event on the window object
+window.addEventListener('resize', WindowSizeCheck);
