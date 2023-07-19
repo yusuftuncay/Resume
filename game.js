@@ -192,10 +192,16 @@ function WindowSizeCheck() {
   // 1st / Canvas
   if (window.innerWidth < 440) {
     document.getElementById("game").style.width = "350px";
-    document.querySelector('.container').style.padding = "0px";
+    document.getElementById("game").style.height = "350px";
+
+    document.getElementById("game").style.marginTop = "20px";
+    document.querySelector(".container").style.padding = "0px";
   } else if (window.innerWidth > 440) {
     document.getElementById("game").style.width = "400px";
-    document.querySelector('.container').style.padding = "20px";
+    document.getElementById("game").style.height = "400px";
+
+    document.getElementById("game").style.marginTop = "0px";
+    document.querySelector(".container").style.padding = "20px";
   }
 
   // 2nd / ScoreBoard
