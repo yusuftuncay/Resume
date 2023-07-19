@@ -191,8 +191,8 @@ function MoveSnake(e) {
 function WindowSizeCheck() {
   // 1st / Canvas
   if (window.innerWidth < 440) {
-    document.getElementById("game").style.width = "350px";
-    document.getElementById("game").style.height = "350px";
+    document.getElementById("game").style.width = "300px";
+    document.getElementById("game").style.height = "300px";
 
     document.getElementById("game").style.marginTop = "20px";
     document.querySelector(".container").style.padding = "0px";
