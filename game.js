@@ -197,6 +197,59 @@ function WindowSizeCheck() {
     document.getElementById("scoreTab").style.display = "none"; // Hide Score
 
     document.querySelector(".container").style.cssText = "bottom: 100px; position: absolute; padding: 0px !important;"; // Fixes Buggy stuff
+
+    // Fix Mobile View
+    if (upButton) { // Remove the click event listeners for the buttons
+      upButton.removeEventListener("click", handleUpButtonClick);
+    }
+    if (leftButton) {
+      leftButton.removeEventListener("click", handleLeftButtonClick);
+    }
+    if (rightButton) {
+      rightButton.removeEventListener("click", handleRightButtonClick);
+    }
+    if (downButton) {
+      downButton.removeEventListener("click", handleDownButtonClick);
+    }
+
+    function handleUpButtonClick() {
+      if (snake.dy === 0) {
+        snake.dy = -grid;
+        snake.dx = 0;
+      }
+    }
+    function handleLeftButtonClick() {
+      if (snake.dx === 0) {
+        snake.dx = -grid;
+        snake.dy = 0;
+      }
+    }
+    function handleRightButtonClick() {
+      if (snake.dx === 0) {
+        snake.dx = grid;
+        snake.dy = 0;
+      }
+    }
+    function handleDownButtonClick() {
+      if (snake.dy === 0) {
+        snake.dy = grid;
+        snake.dx = 0;
+      }
+    }
+
+    // Add event listeners to the buttons using touchstart
+    if (upButton) {
+      upButton.addEventListener("touchstart", handleUpButtonClick);
+    }
+    if (leftButton) {
+      leftButton.addEventListener("touchstart", handleLeftButtonClick);
+    }
+    if (rightButton) {
+      rightButton.addEventListener("touchstart", handleRightButtonClick);
+    }
+    if (downButton) {
+      downButton.addEventListener("touchstart", handleDownButtonClick);
+    }  
   } else if (window.innerWidth > 440) {
     document.getElementById("game").style.width = "400px";
     document.getElementById("game").style.height = "400px";
@@ -245,50 +298,6 @@ function WindowSizeCheck() {
     document.getElementById("buttonContainer").classList.add("hidden");
   }
 }
-
-// #region Jo
-  function handleUpButtonClick() {
-    if (snake.dy === 0) {
-      snake.dy = -grid;
-      snake.dx = 0;
-    }
-  }
-
-  function handleLeftButtonClick() {
-    if (snake.dx === 0) {
-      snake.dx = -grid;
-      snake.dy = 0;
-    }
-  }
-
-  function handleRightButtonClick() {
-    if (snake.dx === 0) {
-      snake.dx = grid;
-      snake.dy = 0;
-    }
-  }
-
-  function handleDownButtonClick() {
-    if (snake.dy === 0) {
-      snake.dy = grid;
-      snake.dx = 0;
-    }
-  }
-
-  // Add event listeners to the buttons using touchstart
-  if (upButton) {
-    upButton.addEventListener("touchstart", handleUpButtonClick);
-  }
-  if (leftButton) {
-    leftButton.addEventListener("touchstart", handleLeftButtonClick);
-  }
-  if (rightButton) {
-    rightButton.addEventListener("touchstart", handleRightButtonClick);
-  }
-  if (downButton) {
-    downButton.addEventListener("touchstart", handleDownButtonClick);
-  }
-// #endregion
 
 // Start the game
 requestAnimationFrame(loop);
