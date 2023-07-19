@@ -193,9 +193,10 @@ function WindowSizeCheck() {
   if (window.innerWidth < 440) { // 440px is purely for really really small devices
     document.getElementById("game").style.width = "300px"; // Make Width smaller on Mobile
     document.getElementById("game").style.height = "300px"; // Make Width larger on Mobile
-
+    
     document.getElementById("scoreTab").style.display = "none"; // Hide Score
-    document.querySelector(".container").style.padding = "0px";
+
+    document.querySelector(".container").style.cssText = "bottom: 200px; position: absolute; padding: 0px !important;"; // Fixes Buggy stuff
   } else if (window.innerWidth > 440) {
     document.getElementById("game").style.width = "400px";
     document.getElementById("game").style.height = "400px";
