@@ -196,7 +196,7 @@ function WindowSizeCheck() {
     
     document.getElementById("scoreTab").style.display = "none"; // Hide Score
 
-    document.querySelector(".container").style.cssText = "bottom: 200px; position: absolute; padding: 0px !important;"; // Fixes Buggy stuff
+    document.querySelector(".container").style.cssText = "bottom: 100px; position: absolute; padding: 0px !important;"; // Fixes Buggy stuff
   } else if (window.innerWidth > 440) {
     document.getElementById("game").style.width = "400px";
     document.getElementById("game").style.height = "400px";
