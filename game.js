@@ -190,17 +190,17 @@ function MoveSnake(e) {
 // Change the layout on mobile view
 function WindowSizeCheck() {
   // 1st / Canvas
-  if (window.innerWidth < 440) {
-    document.getElementById("game").style.width = "300px";
-    document.getElementById("game").style.height = "300px";
+  if (window.innerWidth < 440) { // 440px is purely for really really small devices
+    document.getElementById("game").style.width = "300px"; // Make Width smaller on Mobile
+    document.getElementById("game").style.height = "300px"; // Make Width larger on Mobile
 
-    // document.getElementById("game").style.marginTop = "40px";
+    document.getElementById("scoreTab").style.display = "none"; // Hide Score
     document.querySelector(".container").style.padding = "0px";
   } else if (window.innerWidth > 440) {
     document.getElementById("game").style.width = "400px";
     document.getElementById("game").style.height = "400px";
 
-    // document.getElementById("game").style.marginTop = "0px";
+    document.getElementById("scoreTab").style.display = "block"; // Show Score
     document.querySelector(".container").style.padding = "40px";
   }
 
