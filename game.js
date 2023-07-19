@@ -246,6 +246,50 @@ function WindowSizeCheck() {
   }
 }
 
+// #region Jo
+  function handleUpButtonClick() {
+    if (snake.dy === 0) {
+      snake.dy = -grid;
+      snake.dx = 0;
+    }
+  }
+
+  function handleLeftButtonClick() {
+    if (snake.dx === 0) {
+      snake.dx = -grid;
+      snake.dy = 0;
+    }
+  }
+
+  function handleRightButtonClick() {
+    if (snake.dx === 0) {
+      snake.dx = grid;
+      snake.dy = 0;
+    }
+  }
+
+  function handleDownButtonClick() {
+    if (snake.dy === 0) {
+      snake.dy = grid;
+      snake.dx = 0;
+    }
+  }
+
+  // Add event listeners to the buttons using touchstart
+  if (upButton) {
+    upButton.addEventListener("touchstart", handleUpButtonClick);
+  }
+  if (leftButton) {
+    leftButton.addEventListener("touchstart", handleLeftButtonClick);
+  }
+  if (rightButton) {
+    rightButton.addEventListener("touchstart", handleRightButtonClick);
+  }
+  if (downButton) {
+    downButton.addEventListener("touchstart", handleDownButtonClick);
+  }
+// #endregion
+
 // Start the game
 requestAnimationFrame(loop);
 
