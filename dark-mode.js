@@ -3,8 +3,6 @@ var darkModeState = localStorage.getItem("darkMode"); // Get the stored value fr
 
 // Checking DarkMode State
 function checkDarkModeState() {
-    var darkModeState = localStorage.getItem("darkMode"); // Get the stored value from localStorage
-    
     if (darkModeState === "true") {
         darkMode(true); // Enable dark mode
     } else {
@@ -14,8 +12,6 @@ function checkDarkModeState() {
     localStorage.setItem("darkMode", darkModeState); // Store the updated state in localStorage
 }
 function checkDarkModeStateOnButtonPress() {
-    var darkModeState = localStorage.getItem("darkMode"); // Get the stored value from localStorage
-  
     if (darkModeState === "true") {
       darkMode(false); // Disable dark mode
       darkModeState = "false"; // Update the state to "false"
