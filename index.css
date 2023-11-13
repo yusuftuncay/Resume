@@ -17,26 +17,26 @@ html, body * {
 .left-column {
     width: 50%;
     float: left;
-    margin-bottom: 50;
+    margin-bottom: 50px;
 }
 .right-column {
     width: 50%;
     float: left;
-    margin-bottom: 50;
+    margin-bottom: 50px;
 }
 
 /* Name */
 .name {
     font-size: 36px;
     display: block;
-    margin: 14 auto;
+    margin: 14px auto;
     text-align: center;
 }
 .center-text {
     text-align: center;
 }
 .my-info a {
-    margin: 15 0;
+    margin: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,11 +53,11 @@ html, body * {
     padding: 0 16px;
 }
 .right-column .title {
-    margin: 6 0;
+    margin: 6px 0;
     padding: 0.01em 16px;
 }
 .left-column .title {
-    margin: 6 0;
+    margin: 6px 0;
 }
 
 /* Projects */
@@ -117,7 +117,7 @@ a:hover {
 }
 .box-shadow-dark {
     border: 0 solid gray;
-    box-shadow: 0px 0px 5px 2px #1a1a1a;
+    box-shadow: 0 0 5px 2px #1a1a1a;
 }
 
 /* Interests Card */
@@ -141,7 +141,7 @@ a:hover {
         margin: 0 0 80 0;
     }
     .card {
-        margin: 30;
+        margin: 30px;
     }
     .project img {
         width: 100%;
