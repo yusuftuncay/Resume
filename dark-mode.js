@@ -19,9 +19,19 @@ function checkDarkModeStateOnButtonPress() {
     if (darkModeState === "true") {
       darkMode(false); // Disable dark mode
       darkModeState = "false"; // Update the state to "false"
+
+      // Show images in dark mode
+      document.querySelectorAll(".project img").forEach(function(image) {
+            image.style.display = "inline";
+        });
     } else {
       darkMode(true); // Enable dark mode
       darkModeState = "true"; // Update the state to "true"
+
+      // Hide images in dark mode
+      document.querySelectorAll(".project img").forEach(function(image) {
+            image.style.display = "none";
+        });
     }
   
     localStorage.setItem("darkMode", darkModeState); // Store the updated state in localStorage
