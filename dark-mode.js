@@ -54,6 +54,11 @@ function darkMode(isEnabled) {
             high.style.color = "black";
             canvas.style.borderColor = "black";
         }
+
+        // Hide images in dark mode
+        document.querySelectorAll(".project img").forEach(function(image) {
+              image.style.display = "none";
+          });
     }
     else if (isEnabled == true) {
         document.body.classList.add("dark-mode");
