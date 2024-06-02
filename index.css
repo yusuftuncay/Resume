@@ -1,5 +1,6 @@
 /* Body */
-html, body * {
+html,
+body * {
     font-family: ForoSans;
 }
 
@@ -22,7 +23,7 @@ html, body * {
 .right-column {
     width: 50%;
     float: left;
-    margin-bottom: 50px;
+    margin-bottom: 85px;
 }
 
 /* Name */
@@ -61,10 +62,17 @@ html, body * {
 }
 
 /* Projects */
-.project img
-{
+.project img {
     width: 100%;
     border-radius: 8px;
+}
+
+/* Work Experience */
+.entelec-div {
+    display: flex;
+}
+.entelec-div h5 {
+    padding-right: 5px;
 }
 
 /* Extra */
@@ -74,7 +82,8 @@ html, body * {
 .text-teal {
     color: teal;
 }
-.title { /* Title */
+.title {
+    /* Title */
     font-size: 28px;
 }
 a:hover {
@@ -82,7 +91,8 @@ a:hover {
 }
 
 /* w3 Overwrite */
-.w3-small, .w3-teal {
+.w3-small,
+.w3-teal {
     height: 18px;
 }
 .w3-dark-grey {
@@ -111,7 +121,7 @@ a:hover {
     opacity: 70%;
 }
 
- /* Dark Mode */
+/* Dark Mode */
 .dark-mode {
     background-color: rgb(10 10 10);
     color: lightgray;
@@ -125,7 +135,8 @@ a:hover {
 #arrowIcon {
     height: 22px;
 }
-#interests { /* Initially hide the interests element */
+#interests {
+    /* Initially hide the interests element */
     margin: 0;
     height: 0;
     opacity: 0;
@@ -134,7 +145,8 @@ a:hover {
 
 /* Media */
 @media screen and (max-width: 750px) {
-    .left-column, .right-column {
+    .left-column,
+    .right-column {
         width: 100%;
         float: none;
     }
