@@ -1,22 +1,22 @@
 ﻿<!DOCTYPE html>
-<html lang="nl-BE">
+<html lang="en">
     <head>
         <title>Resume</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="icon" href="images/globe.png" />
         <!-- Website Icon -->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+        <link rel="icon" href="images/globe.png" />
         <!-- Progress Bar Styling -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-        <link rel="stylesheet" href="index.css" />
         <!-- Index CSS -->
+        <link rel="stylesheet" href="index.css" />
 
-        <script src="index.js"></script>
         <!-- Index JS -->
-        <script src="dark-mode.js"></script>
+        <script src="index.js"></script>
         <!-- Dark Mode JS -->
+        <script src="dark-mode.js"></script>
     </head>
 
     <body onload="checkDarkModeState()">
@@ -34,7 +34,7 @@
 
                         <div class="center-item">
                             <div class="center-text my-info">
-                                <p style="margin-top: 0">Belgium, Genk</p>
+                                <p>Belgium, Genk</p>
                                 <a href="mailto:yusuf@tuncay.be">yusuf@tuncay.be</a>
                                 <a href="https://github.com/yusuftuncay" target="_blank">GitHub</a>
                             </div>
@@ -86,10 +86,15 @@
 
                 <!-- Projects -->
                 <div class="card box-shadow">
-                    <div class="container project">
+                    <div class="title project-div">
                         <a href="https://github.com/yusuftuncay/" target="_blank">
-                            <p class="title"><strong>Projects</strong></p>
+                            <p class="title project-title"><strong>Projects</strong></p>
                         </a>
+                        <a onclick="toggleProjects()">
+                            <img id="projectsIcon" src="images/light-mode-arrow.png" alt="Projects Dropdown Icon" />
+                        </a>
+                    </div>
+                    <div class="container project" id="projects">
                         <a href="https://github.com/yusuftuncay/SpamBot" target="_blank">
                             <p>SpamBot</p>
                             <img
@@ -117,7 +122,7 @@
                         </a>
                         <hr />
 
-                        <a href="https://github.com/yusuftuncay/AnimeNow" target="_blank" disabled>
+                        <a href="https://github.com/yusuftuncay/AnimeNow" target="_blank">
                             <p>AnimeNow</p>
                             <img class="box-shadow" src="https://github.com/yusuftuncay/AnimeNow/assets/70652416/0d9de64b-503f-4efa-aa85-244e747a2389" alt="AnimeNow Project" />
                         </a>
@@ -137,14 +142,14 @@
                                 <h5>Entelec Control Systems</h5>
                             </a>
                         </div>
-                        <h6 class="text-teal"><em>October 2023 - June 2024</em></h6>
+                        <h6 class="text-teal"><em>Oct 2023 - Jun 2024</em></h6>
                     </div>
                     <hr />
                     <div class="container work-experience-card">
                         <a href="https://www.newyorker.de/nl" target="_blank">
                             <h5>New Yorker</h5>
                         </a>
-                        <h6 class="text-teal"><em>July 2023 - heden</em></h6>
+                        <h6 class="text-teal"><em>Jul 2023 - Present</em></h6>
                     </div>
                     <hr />
                     <div class="container">
@@ -153,12 +158,12 @@
                                 <h5>Konings</h5>
                             </a>
                         </div>
-                        <h6 class="text-teal"><em>July 2020 - June 2022</em></h6>
+                        <h6 class="text-teal"><em>Jul 2020 - Jun 2022</em></h6>
                     </div>
                     <hr />
                     <div class="container">
                         <h5>Various Student Jobs</h5>
-                        <h6 class="text-teal"><em>Sep 2016 - November 2019</em></h6>
+                        <h6 class="text-teal"><em>Sep 2016 - Nov 2019</em></h6>
                     </div>
                 </div>
 
@@ -167,17 +172,18 @@
                     <p class="title"><strong>Education</strong></p>
                     <div class="container">
                         <h5><em>Highschool PXL</em></h5>
-                        <h6 class="text-teal"><em>Sep 2020 - J une 2024</em></h6>
+                        <h6 class="text-teal"><em>Sep 2020 - Jun 2024</em></h6>
                         <p>&bull;&nbsp; Degree in Programming</p>
                         <hr />
                     </div>
                     <div class="container">
                         <h5><em>Atlas College</em></h5>
-                        <h6 class="text-teal"><em>Sep 2013 - J un 2019</em></h6>
+                        <h6 class="text-teal"><em>Sep 2013 - Jun 2019</em></h6>
                         <p>&bull;&nbsp; Technology and Innovation: Electricity</p>
                     </div>
                 </div>
 
+                <!-- Interests -->
                 <div class="card box-shadow">
                     <p class="title">
                         <strong>Interests&nbsp;&nbsp;</strong>

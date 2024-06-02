@@ -42,6 +42,9 @@ body * {
     justify-content: center;
     align-items: center;
 }
+.my-info p {
+    margin-top: 0;
+}
 
 /* Cards */
 .card {
@@ -53,6 +56,8 @@ body * {
 .container {
     padding: 0 16px;
 }
+
+/* Title */
 .right-column .title {
     margin: 6px 0;
     padding: 0.01em 16px;
@@ -60,8 +65,15 @@ body * {
 .left-column .title {
     margin: 6px 0;
 }
+.project-title {
+    padding: 0.01em 16px;
+}
 
 /* Projects */
+.project div {
+    display: flex;
+    align-items: center;
+}
 .project img {
     width: 100%;
     border-radius: 8px;
@@ -132,11 +144,13 @@ a:hover {
 }
 
 /* Interests Card */
-#arrowIcon {
+#arrowIcon,
+#projectsIcon {
     height: 22px;
 }
-#interests {
-    /* Initially hide the interests element */
+#interests,
+#projects {
+    /* Initially hide the interests and projects elements */
     margin: 0;
     height: 0;
     opacity: 0;
