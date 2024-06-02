@@ -70,7 +70,7 @@ body * {
 }
 
 /* Projects */
-.project div {
+.project-div {
     display: flex;
     align-items: center;
 }
