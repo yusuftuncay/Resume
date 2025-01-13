@@ -13,22 +13,22 @@ function checkDarkModeState() {
 }
 function checkDarkModeStateOnButtonPress() {
     if (darkModeState === "true") {
-      darkMode(false); // Disable dark mode
-      darkModeState = "false"; // Update the state to "false"
+        darkMode(false); // Disable dark mode
+        darkModeState = "false"; // Update the state to "false"
     } else {
-      darkMode(true); // Enable dark mode
-      darkModeState = "true"; // Update the state to "true"
+        darkMode(true); // Enable dark mode
+        darkModeState = "true"; // Update the state to "true"
     }
-  
+
     localStorage.setItem("darkMode", darkModeState); // Store the updated state in localStorage
-  }
+}
 
 // Dark Mode
 function darkMode(isEnabled) {
     var progressBars = document.querySelectorAll(".w3-light-grey, .w3-dark-grey"); // All Progress Bars
     var shadows = document.querySelectorAll(".box-shadow, .box-shadow-dark"); // All Box Shadows
     var hrElements = document.querySelectorAll("hr"); // All HR Tags
-    
+
     var score = document.getElementById("score"); // Score Element
     var high = document.getElementById("high"); // High Element
     var canvas = document.querySelector("canvas:first-of-type"); // Canvas Element
@@ -38,7 +38,7 @@ function darkMode(isEnabled) {
         document.body.classList.remove("dark-mode");
         document.getElementsByClassName("footer")[0].classList.remove("dark-mode");
 
-        // Basically a Check if User is on the "game" page 
+        // Basically a Check if User is on the "game" page
         if (score !== null && high !== null) {
             score.style.color = "black";
             high.style.color = "black";
@@ -46,15 +46,14 @@ function darkMode(isEnabled) {
         }
 
         // Hide images in dark mode
-        document.querySelectorAll(".project img").forEach(function(image) {
-              image.style.display = "none";
-          });
-    }
-    else if (isEnabled == true) {
+        document.querySelectorAll(".project img").forEach(function (image) {
+            image.style.display = "none";
+        });
+    } else if (isEnabled == true) {
         document.body.classList.add("dark-mode");
         document.getElementsByClassName("footer")[0].classList.add("dark-mode");
 
-        // Basically a Check if User is on the "game" page 
+        // Basically a Check if User is on the "game" page
         if (score !== null && high !== null) {
             score.style.color = "white";
             high.style.color = "white";
@@ -67,8 +66,7 @@ function darkMode(isEnabled) {
         if (isEnabled == false) {
             shadows[i].classList.remove("box-shadow-dark");
             shadows[i].classList.add("box-shadow");
-        } 
-        else if (isEnabled == true) {
+        } else if (isEnabled == true) {
             shadows[i].classList.remove("box-shadow");
             shadows[i].classList.add("box-shadow-dark");
         }
@@ -79,8 +77,7 @@ function darkMode(isEnabled) {
         if (isEnabled == false) {
             progressBars[i].classList.remove("w3-dark-grey");
             progressBars[i].classList.add("w3-light-grey");
-        } 
-        else if (isEnabled == true) {
+        } else if (isEnabled == true) {
             progressBars[i].classList.remove("w3-light-grey");
             progressBars[i].classList.add("w3-dark-grey");
         }
@@ -90,8 +87,7 @@ function darkMode(isEnabled) {
     for (var i = 0; i < hrElements.length; i++) {
         if (isEnabled == false) {
             hrElements[i].classList.remove("w3-dark-hr");
-        } 
-        else if (isEnabled == true){
+        } else if (isEnabled == true) {
             hrElements[i].classList.add("w3-dark-hr");
         }
     }
@@ -99,33 +95,33 @@ function darkMode(isEnabled) {
     // Footer Icon
     var darkModeIcon = document.getElementById("darkModeIcon");
     var gameIcon = document.getElementById("gameIcon");
-    var arrowIcon = document.getElementById("arrowIcon");
+    var arrowIcons = document.querySelectorAll("#arrowIcon");
 
     if (!isEnabled) {
         darkModeIcon.src = "images/light-mode-sun.png";
         gameIcon.src = "images/light-mode-game.png";
-        
-        if (arrowIcon) { // Basically a Check if User is on the "resume" page 
+
+        arrowIcons.forEach(function (arrowIcon) {
             arrowIcon.src = "images/light-mode-arrow.png";
-        }
+        });
     } else {
         darkModeIcon.src = "images/dark-mode-sun.png";
         gameIcon.src = "images/dark-mode-game.png";
-        
-        if (arrowIcon) { // Basically a Check if User is on the "resume" page 
+
+        arrowIcons.forEach(function (arrowIcon) {
             arrowIcon.src = "images/dark-mode-arrow.png";
-        }
+        });
     }
 
     // Images
     if (!isEnabled) {
         // Hide images in dark mode
-            document.querySelectorAll(".project img").forEach(function(image) {
+        document.querySelectorAll(".project img").forEach(function (image) {
             image.style.display = "inline";
         });
     } else {
         // Show images in dark mode
-            document.querySelectorAll(".project img").forEach(function(image) {
+        document.querySelectorAll(".project img").forEach(function (image) {
             image.style.display = "none";
         });
     }

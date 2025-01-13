@@ -136,8 +136,7 @@ a:hover {
 }
 
 /* Interests Card */
-#arrowIcon,
-#projectsIcon {
+#arrowIcon {
     height: 22px;
 }
 #interests,

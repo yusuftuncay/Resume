@@ -3,9 +3,9 @@ var isInterestsFlipped = false;
 var isProjectsFlipped = false;
 
 // Function to flip the interests image and toggle the visibility of the interests element
-function flipImage() {
+function toggleInterests() {
     // Retrieve elements with the IDs
-    var image = document.getElementById("arrowIcon");
+    var image = document.querySelector(".interests-div img");
     var interests = document.getElementById("interests");
 
     // Check if the interests image is flipped
@@ -42,7 +42,7 @@ function flipImage() {
 // Function to flip the projects image and toggle the visibility of the projects element
 function toggleProjects() {
     // Retrieve elements with the IDs
-    var image = document.getElementById("projectsIcon");
+    var image = document.querySelector(".project-div img");
     var projects = document.getElementById("projects");
 
     // Check if the projects image is flipped
