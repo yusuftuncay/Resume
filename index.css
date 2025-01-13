@@ -79,14 +79,6 @@ body * {
     border-radius: 8px;
 }
 
-/* Work Experience */
-.entelec-div {
-    display: flex;
-}
-.entelec-div h5 {
-    padding-right: 5px;
-}
-
 /* Extra */
 .box-shadow {
     box-shadow: 0px 0px 10px 1px #e0e0e0;
